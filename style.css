@@ -6,7 +6,7 @@
 
 :root {
 
-    /*Cores*/
+    /*Colors*/
 
     --content-primary: #FFFFFF;
     --content-secondary: #C7C9CC;
@@ -29,4 +29,23 @@
     --gradient-border: linear-gradient(var(--accent-green) 0%, var(--accent-lime) 14.84%, var(--accent-red) 15%, var(--accent-pink) 65.79%, var(--accent-blue) 84.58%);
     --gradient-background: linear-gradient(var(--accent-pink) 0%, var(--accent-blue) 98.93%);
     --gradient-content: linear-gradient(var(--content-secondary) 0%, var(--background-gray) 100%);
+
+
+    /*Fonts*/
+
+    --ff-sora: "Sora", sans-serif;
+    --ff-mono: "Roboto Mono", monospace;
+    --ff-flex: "Roboto Flex", sans-serif;
+
+    --dl: 700 4.5rem/130% var(--ff-sora);
+    --dm: 700 2.5rem/130% var(--ff-sora);
+    --ds: 600 2rem/130% var(--ff-sora);
+
+    --overline: 600 1rem/150% var(--ff-mono);
+
+    --pl: 500 1rem/150% var(--ff-flex);
+    --pm: 500 0.875rem/150% var(--ff-flex);
+    --ps: 500 0.75rem/150% var(--ff-flex);
+    --lm: 600 1.25rem/150% var(--ff-flex);
+    --ls: 600 1rem/150% var(--ff-flex);
 }
