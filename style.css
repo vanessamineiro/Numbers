@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
@@ -48,4 +51,25 @@
     --ps: 500 0.75rem/150% var(--ff-flex);
     --lm: 600 1.25rem/150% var(--ff-flex);
     --ls: 600 1rem/150% var(--ff-flex);
+}
+
+html {
+  background-color: var(--background-primary);
+  color: var(--content-primary);
+}
+
+header {
+  display: flex;
+  width: 100%;
+  gap: 0.687rem;
+  margin-top: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  font: 700 1.5rem/130% var(--ff-sora);
+  text-transform: uppercase;
+}
+
+.container {
+  margin-top: 2.875rem;
+  max-width: 19.937rem;
 }
