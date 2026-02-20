@@ -30,13 +30,24 @@
 
                 <div class="title-form">
                     <h2>Quero sortear:</h2>
-                    <span>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</span>
+                    <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É
+                        rápido e fácil!</p>
                 </div>
 
                 <form method="post">
-                    <input id="qtd" name="quantidade" type="number" placeholder="2">
-                    <input id="de" name="de" type="number" placeholder="1">
-                    <input id="ate" name="ate" type="number" placeholder="100">
+
+                    <div class="fields">
+                    
+                        <input id="qtd" name="quantidade" type="number" placeholder="2">
+                        <label for="quantidade">Números</label>
+
+                        <input id="de" name="de" type="number" placeholder="1">
+                        <label for="de">de</label>
+
+                        <input id="ate" name="ate" type="number" placeholder="100">
+                        <label for="ate">até</label>
+                    </div>
+
                     <input id="repeat" name="repeat" type="checkbox">
                     <label for="repeat">Não repetir número</label>
                 </form>
@@ -46,12 +57,14 @@
                         <li>
                             <img src="assets/question-icon.svg" alt="">
                             <h3>Como funciona o sorteador de números?</h3>
-                            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do
+                                intervalo especificado pelo usuário.</p>
                         </li>
                         <li>
                             <img src="assets/question-icon.svg" alt="">
                             <h3>Posso escolher o intervalo dos números?</h3>
-                            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.
+                            </p>
                         </li>
                     </ul>
                 </div>
