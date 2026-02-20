@@ -82,6 +82,23 @@ p {
   color: var(--content-tertiary);
 }
 
+input {
+  all: unset;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 .container {
   --max-width: 19.937rem;
   width: min(var(--max-width), 100% - 2.25rem * 2);
@@ -115,14 +132,42 @@ p {
 }
 
 form {
+  width: 100%;
   margin-top: 2.5rem;
 
   & .fields {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 0.75rem;
+
+    & label {
+      font: var(--ls);
+      text-transform: uppercase;
+      color: var(--content-secondary);
+      text-align: center;
+    }
+
+    & input {
+      background-color: var(--background-secondary);
+      padding: .25rem .5rem;
+      font: var(--ds);
+      text-align: center;
+      border-radius: .5rem;
+    }
+
+    & input::placeholder {
+      color: var(--content-primary);
+    }
+
+    & .field {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
   }
-}
 
-.questions {
 
 }
+
+
+.questions {}
