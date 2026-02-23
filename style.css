@@ -77,6 +77,11 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font: var(--pm);
+  color: var(--content-brand);
+}
+
 p {
   font: var(--pm);
   color: var(--content-tertiary);
@@ -98,6 +103,9 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+ul {
+  list-style: none;
+}
 
 .container {
   --max-width: 19.937rem;
@@ -137,12 +145,18 @@ form {
   width: 100%;
   margin-top: 2.5rem;
 
+  & label {
+    font: var(--pm);
+    color: var(--content-tertiary);
+  }
+
 }
 
 .fields {
   width: 100%;
   display: flex;
   gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .field {
@@ -176,4 +190,14 @@ form {
 
 
 
-.questions {}
+.questions {
+  margin-top: 5rem;
+}
+
+.li-item {
+  margin-bottom: 2.25rem;
+  display: flex;
+  gap: .5rem;
+  align-items: flex-start;
+}
+
