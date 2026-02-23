@@ -140,17 +140,14 @@ form {
 }
 
 .fields {
-  border: 1px solid;
+  width: 100%;
   display: flex;
   gap: 0.75rem;
-
 }
 
 .field {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  flex: 1;
   gap: .5rem;
 
   & label {
@@ -163,7 +160,7 @@ form {
   & input {
     width: 100%;
     background-color: var(--background-secondary);
-    padding: .25rem .5rem;
+    padding-block: .25rem;
     font: var(--ds);
     text-align: center;
     border-radius: .5rem;
