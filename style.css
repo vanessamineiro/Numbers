@@ -186,7 +186,30 @@ form {
 }
 
 
+.repeat {
+  display: flex;
+  gap: .5rem;
+  
 
+  position: relative;
+
+  & [type="checkbox"] {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  & .checkbox-img {
+    width: 1.875rem;
+    height: 1.25rem;
+    background-image: url(assets/default.svg);
+
+  }
+
+  &:has(:checked) .checkbox-img {
+    background-image: url(assets/active.svg);
+  }
+}
 
 
 
