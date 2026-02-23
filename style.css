@@ -52,9 +52,15 @@
   --ls: 600 1rem/150% var(--ff-flex);
 }
 
-html {
+body {
   background-color: var(--background-primary);
   color: var(--content-primary);
+  background-image:
+    linear-gradient(var(--background-primary) 0, transparent 100%), url("assets/Shapes.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    bottom;
+  background-size: cover;
 }
 
 header {
@@ -189,7 +195,7 @@ form {
 .repeat {
   display: flex;
   gap: .5rem;
-  
+
 
   position: relative;
 
@@ -211,6 +217,24 @@ form {
   }
 }
 
+button {
+  margin-top: 2.5rem;
+  display: flex;
+  width: 100%;
+  background-color: var(--background-tertiary);
+  cursor: pointer;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1rem;
+  border-radius: .5rem;
+  border: none;
+  & span {
+    font: var(--lm);
+    color: var(--content-primary);
+  }
+
+}
 
 
 .questions {
@@ -223,4 +247,3 @@ form {
   gap: .5rem;
   align-items: flex-start;
 }
-
