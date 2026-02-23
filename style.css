@@ -56,11 +56,11 @@ body {
   background-color: var(--background-primary);
   color: var(--content-primary);
   background-image:
-    linear-gradient(var(--background-primary) 0, transparent 100%), url("assets/Shapes.svg");
+    linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url("assets/Shapes.svg");
   background-repeat: no-repeat, no-repeat;
   background-position:
     bottom;
-  background-size: cover;
+  background-size: 100%, cover;
 }
 
 header {
@@ -178,19 +178,34 @@ form {
   }
 
   & input {
+    position: relative;
     width: 100%;
     background-color: var(--background-secondary);
     padding-block: .25rem;
     font: var(--ds);
     text-align: center;
     border-radius: .5rem;
+    border: 2px solid transparent;
+    outline: none;
+    transition: color .3s ease-in-out;
+
+    &:focus-within {
+      color: var(--content-brand);
+    }
+
+    &:hover {
+      color: var(--content-brand);
+    }
+
   }
+
 
   & input::placeholder {
     color: var(--content-primary);
   }
 }
 
+/* https://github.com/mattheusfillipe/sorteador-de-numeros/blob/main/style.css */
 
 .repeat {
   display: flex;
@@ -218,6 +233,9 @@ form {
 }
 
 button {
+  all: unset;
+  position: relative;
+  box-sizing: border-box;
   margin-top: 2.5rem;
   display: flex;
   width: 100%;
@@ -229,9 +247,37 @@ button {
   padding-block: 1rem;
   border-radius: .5rem;
   border: none;
+  transition: background-color .4s ease;
+
   & span {
     font: var(--lm);
     color: var(--content-primary);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    translate: -50% -50%;
+    border-radius: 8px;
+    background-image: var(--gradient-border);
+    z-index: -1;
+    padding: 2px;
+    opacity: 0;
+    animation: 3s spin linear infinite;
+    transition: opacity .4s ease;
+
+  }
+
+  &:hover {
+    background-color: var(--background-secondary);
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 
 }
@@ -247,3 +293,5 @@ button {
   gap: .5rem;
   align-items: flex-start;
 }
+
+@media (width >=80rem) {}
