@@ -21,9 +21,42 @@
 
     <main>
         <div class="container">
-            <div class="header">
-                <span>Online - gratuito</span>
-                <h1>Sorteador de números</h1>
+            <div class="left">
+                <div class="header-content">
+                    <span>Online - gratuito</span>
+                    <h1>Sorteador de números</h1>
+                </div>
+
+                <div class="questions desktop-only">
+                    <ul>
+                        <li>
+                            <div class="li-item">
+                                <img src="assets/question-icon.svg" alt="">
+                                <div class="li-text">
+                                    <h3>Como funciona o sorteador de números?</h3>
+                                    <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro
+                                        do
+                                        intervalo especificado pelo usuário.</p>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li>
+                            <div class="li-item">
+                                <img src="assets/question-icon.svg" alt="">
+                                <div class="li-text">
+                                    <h3>Posso escolher o intervalo dos números?</h3>
+                                    <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números
+                                        sorteados.
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="content">
@@ -69,23 +102,22 @@
                     </div>
 
 
+                    <div class="repeat">
+                        <input id="repeat" name="repeat" type="checkbox">
+                        <div class="checkbox-img"></div>
+                        <label for="repeat">Não repetir número</label>
+                    </div>
+
+                    <button type="submit">
+                        <span>SORTEAR</span>
+                        <img src="assets/arrow.svg" alt="Flecha">
+                    </button>
+
+
+                </form>
             </div>
 
-            <div class="repeat">
-                <input id="repeat" name="repeat" type="checkbox">
-                <div class="checkbox-img"></div>
-                <label for="repeat">Não repetir número</label>
-            </div>
-
-            <button type="submit">
-                <span>SORTEAR</span>
-                <img src="assets/arrow.svg" alt="Flecha">
-            </button>
-
-
-            </form>
-
-            <div class="questions">
+            <div class="questions mobile-only">
                 <ul>
                     <li>
                         <div class="li-item">
@@ -117,7 +149,7 @@
             </div>
 
         </div>
-        </div>
+
     </main>
 
 </body>

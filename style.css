@@ -113,13 +113,17 @@ ul {
   list-style: none;
 }
 
+.desktop-only {
+  display: none;
+}
+
 .container {
   --max-width: 19.937rem;
   width: min(var(--max-width), 100% - 2.25rem * 2);
   margin-inline: auto;
   margin-top: 2.875rem;
 
-  & .header {
+  & .header-content {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -181,6 +185,7 @@ form {
     label {
       color: var(--content-brand);
     }
+
     input {
       background-color: var(--background-tertiary);
     }
@@ -190,10 +195,11 @@ form {
     label {
       color: var(--content-brand);
     }
+
     input {
       background-color: var(--background-tertiary);
     }
-   
+
   }
 
   & input {
@@ -313,4 +319,28 @@ button {
 }
 
 
-@media (width >=80rem) {}
+@media (width >=80rem) {
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  header {
+    --max-width: 68.625rem;
+    width: min(var(--max-width), 100% - 2.25rem * 2);
+    margin-inline: auto;
+    justify-content: left;
+  }
+
+  .container {
+    display: flex;
+    gap: 6.75rem;
+    --max-width: 68.625rem;
+    width: min(var(--max-width), 100% - 2.25rem * 2);
+    margin-inline: auto;
+    margin-top: 5.562rem;
+  }
+}
