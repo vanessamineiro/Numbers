@@ -177,35 +177,54 @@ form {
     text-align: center;
   }
 
+  &:hover {
+    label {
+      color: var(--content-brand);
+    }
+    input {
+      background-color: var(--background-tertiary);
+    }
+  }
+
+  &:focus-within {
+    label {
+      color: var(--content-brand);
+    }
+    input {
+      background-color: var(--background-tertiary);
+    }
+   
+  }
+
   & input {
-    position: relative;
     width: 100%;
     background-color: var(--background-secondary);
     padding-block: .25rem;
     font: var(--ds);
     text-align: center;
     border-radius: .5rem;
-    border: 2px solid transparent;
     outline: none;
-    transition: color .3s ease-in-out;
 
-    &:focus-within {
-      color: var(--content-brand);
-    }
-
-    &:hover {
-      color: var(--content-brand);
-    }
-
-  }
-
-
-  & input::placeholder {
-    color: var(--content-primary);
   }
 }
 
-/* https://github.com/mattheusfillipe/sorteador-de-numeros/blob/main/style.css */
+.input-gradient {
+  box-sizing: border-box;
+  padding: 1.5px;
+  border-radius: .5rem;
+  background: transparent;
+}
+
+.input-gradient:hover {
+  background: var(--gradient-border);
+}
+
+.input-gradient:focus-within {
+  background: var(--gradient-border);
+  padding: 2.5px;
+}
+
+
 
 .repeat {
   display: flex;
@@ -267,7 +286,6 @@ button {
     z-index: -1;
     padding: 2px;
     opacity: 0;
-    animation: 3s spin linear infinite;
     transition: opacity .4s ease;
 
   }
@@ -293,5 +311,6 @@ button {
   gap: .5rem;
   align-items: flex-start;
 }
+
 
 @media (width >=80rem) {}
