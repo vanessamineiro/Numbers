@@ -318,6 +318,10 @@ button {
   align-items: flex-start;
 }
 
+.hide {
+  display: none;
+}
+
 
 @media (width >=80rem) {
   .desktop-only {
