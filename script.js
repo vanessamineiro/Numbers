@@ -3,7 +3,12 @@ const qtdeInput = document.getElementById("qtd");
 const deInput = document.getElementById("de");
 const ateInput = document.getElementById("ate");
 const repeat = document.getElementById("repeat");
-const fields = document.getElementById("fields");
+const repeatCheck = document.querySelector(".repeat-check");
+const fields = document.querySelector(".fields");
+const info = document.querySelector(".title-form");
+const btn = document.querySelector("button");
+const btnSpan = document.querySelector("button span");
+const btnImg = document.querySelector("button img");
 
 
 form.onsubmit = (event) => {
@@ -34,7 +39,7 @@ form.onsubmit = (event) => {
     if (newSort.repeat) {
         // sem repetição
         for (let i = 0; i < newSort.qtde; i++) {
-           noRepeat(newSort.de,newSort.ate,resultados);
+            noRepeat(newSort.de, newSort.ate, resultados);
         }
     } else {
         // com repetição
@@ -43,11 +48,37 @@ form.onsubmit = (event) => {
         }
     }
 
-    mostrarResultado(resultados);
-};
+        mostrarResultado(resultados, newSort.qtde);
+    };
 
-function mostrarResultado(lista) {
-    console.log(lista)
+function mostrarResultado(lista,qtde) {
+    console.log(lista);
+    info.classList.add("hidden");
+    fields.classList.add("hidden");
+    repeatCheck.classList.add("hidden");
+    btn.style.opacity = 0;
+    btnSpan.textContent = "SORTEAR NOVAMENTE";
+    btnImg.src = "assets/again.svg";
+
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("result-content");
+
+    const span = document.createElement("span");
+    span.textContent = "Resultado do sorteio";
+
+    const contentNumber = document.createElement("div");
+    contentNumber.classList.add("content-number");
+
+    for (let i = 0; i < qtde; i++) {
+        const p = document.createElement("p");
+        p.textContent = lista[i];
+        contentNumber.appendChild(p);
+    }
+
+    newDiv.appendChild(span);
+    newDiv.appendChild(contentNumber);
+    document.querySelector(".content").appendChild(newDiv);
+    btn.style.opacity = 1;
 }
 
 function getRandomInt(min, max) {
