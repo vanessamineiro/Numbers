@@ -33,21 +33,13 @@ form.onsubmit = (event) => {
 
     if (newSort.repeat) {
         // sem repetição
-        const numerosDisponiveis = [];
-        for (let i = newSort.de; i <= newSort; i++) {
-            numerosDisponiveis.push(i);
-        }
-
         for (let i = 0; i < newSort.qtde; i++) {
-            const index = Math.floor(Math.random() * numerosDisponiveis.length);
-            resultados.push(numerosDisponiveis[index]);
-            numerosDisponiveis.splice(index, 1);
+           noRepeat(newSort.de,newSort.ate,resultados);
         }
     } else {
         // com repetição
         for (let i = 0; i < newSort.qtde; i++) {
-            const numero = Math.floor(Math.random() * (newSort.ate - de + 1)) + newSort.de;
-            resultados.push(Number(numero));
+            resultados.push(getRandomInt(newSort.de, newSort.ate));
         }
     }
 
@@ -56,5 +48,20 @@ form.onsubmit = (event) => {
 
 function mostrarResultado(lista) {
     console.log(lista)
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function noRepeat(min, max, resultados) {
+    let num = getRandomInt(min, max);
+    if (resultados.includes(num)) {
+        noRepeat(min, max, resultados)
+    } else {
+        resultados.push(num);
+    }
 }
 
