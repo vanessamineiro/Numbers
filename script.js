@@ -9,6 +9,7 @@ const info = document.querySelector(".title-form");
 const btn = document.querySelector("button");
 const btnSpan = document.querySelector("button span");
 const btnImg = document.querySelector("button img");
+const content = document.querySelector(".content");
 
 
 form.onsubmit = (event) => {
@@ -77,7 +78,7 @@ function mostrarResultado(lista,qtde) {
 
     newDiv.appendChild(span);
     newDiv.appendChild(contentNumber);
-    document.querySelector(".content").appendChild(newDiv);
+    content.insertBefore(newDiv,content.children[1]);
     btn.style.opacity = 1;
 }
 
