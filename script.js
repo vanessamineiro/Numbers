@@ -61,6 +61,11 @@ function mostrarResultado(lista,qtde) {
     btnSpan.textContent = "SORTEAR NOVAMENTE";
     btnImg.src = "assets/again.svg";
 
+    const oldDiv = document.querySelector(".result-content");
+    if (oldDiv) {
+        content.removeChild(oldDiv);
+    };
+
     const newDiv = document.createElement("div");
     newDiv.classList.add("result-content");
 
